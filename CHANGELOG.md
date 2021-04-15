@@ -1,3 +1,6 @@
+## v1.6.1
+- Brought over changes from upstream
+
 ## v1.3.1
 
 - Fix, check inputs with empty string values.
