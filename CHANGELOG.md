@@ -1,3 +1,6 @@
+## v1.9.0
+ - Update Ruby version to 3.4.7, modify Dockerfile and build scripts for new image registry, and enhance Gemfile with RSpec for testing.
+
 ## v1.8.1
 - Brought over changes from upstream
 
