@@ -1,3 +1,7 @@
+## v1.9.2 
+ - Fixed bundler version issues
+ - filter out development gems from docker.
+
 ## v1.9.1 
 - Fixed publishing bug
 ## v1.9.0
