@@ -1,3 +1,5 @@
+## v1.9.1 
+- Fixed publishing bug
 ## v1.9.0
  - Update Ruby version to 3.4.7, modify Dockerfile and build scripts for new image registry, and enhance Gemfile with RSpec for testing.
 
