@@ -1,5 +1,11 @@
-## v1.6.1
+## v1.8.1
 - Brought over changes from upstream
+
+## v1.4.0
+
+- Support Github Enterprise [#15](https://github.com/devmasx/merge-branch/pull/15)
+- Bump addressable from 2.7.0 to 2.8.0 [#14](https://github.com/devmasx/merge-branch/pull/14)
+>>>>>>> 6ec8363d74aad4f1615d1234ae1908b4185c4313
 
 ## v1.3.1
 
