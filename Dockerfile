@@ -1,4 +1,5 @@
 FROM ruby:3.4.7-alpine
+LABEL org.opencontainers.image.source=https://github.com/r26D/merge-branch
 
 WORKDIR /action
 
