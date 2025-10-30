@@ -1,3 +1,6 @@
+## v1.9.3
+ - Added auto updating docs/action docker reference
+ - Fixing issue with parameters passed into the system.
 ## v1.9.2 
  - Fixed bundler version issues
  - filter out development gems from docker.

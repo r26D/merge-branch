@@ -30,7 +30,8 @@ inputs:
 runs:
   using: 'docker'
 #image: 'Dockerfile'
-  image: "docker://delmendo/merge-branch:latest"
+ # image: "docker://delmendo/merge-branch:latest"
+  image: "docker://ghcr.io/r26d/merge-branch/merge-branch:v1.9.3"
 branding:
   icon: 'git-merge'
   color: 'purple'

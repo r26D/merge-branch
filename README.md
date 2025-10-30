@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@master
 
       - name: Merge development -> staging
-        uses: devmasx/merge-branch@master
+        uses: r26d/merge_branch@v1.9.1
         with:
           type: now
           from_branch: development
@@ -27,7 +27,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Merge staging -> uat
-        uses: devmasx/merge-branch@master
+        uses: r26d/merge_branch@v1.9.1
         with:
           type: now
           from_branch: staging
@@ -50,7 +50,7 @@ jobs:
       - uses: actions/checkout@master
 
       - name: Merge staging -> uat
-        uses: devmasx/merge-branch@master
+        uses: r26d/merge-branch@v1.9.3"
         with:
           type: now
           target_branch: uat
@@ -72,7 +72,7 @@ jobs:
       - uses: actions/checkout@master
 
       - name: Merge staging -> uat
-        uses: devmasx/merge-branch@master
+        uses: r26d/merge-branch@v1.9.3"
         with:
           type: now
           target_branch: uat
@@ -101,7 +101,7 @@ jobs:
       - uses: actions/checkout@master
 
       - name: Merge by labeled
-        uses: devmasx/merge-branch@master
+        uses: r26d/merge-branch@v1.9.3"
         with:
           label_name: 'merged in develop'
           target_branch: 'develop'
