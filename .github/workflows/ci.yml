@@ -15,18 +15,31 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: ruby/setup-ruby@v1
+      - uses: actions/setup-node@v4
         with:
-          ruby-version: '3.4'
-          bundler-cache: true
+          node-version: '24'
+          cache: 'npm'
+
+      - run: npm ci
 
       - name: Run tests
-        run: bundle exec rspec
+        run: npm test
 
-  docker-build:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build Docker image
-        run: docker build -t merge-branch:test .
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Build dist
+        run: npm run build
+
+      - name: Check dist is up to date
+        run: |
+          git diff --exit-code dist/ || (echo "dist/ is out of date. Run 'npm run build' and commit." && exit 1)

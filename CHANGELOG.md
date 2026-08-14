@@ -1,3 +1,12 @@
+## v2.0.0
+- Rewrote action from Ruby/Docker to Node.js (node24 runtime)
+- Eliminates Docker pull — runs natively on the GitHub Actions runner
+- Removed Dockerfile, Gemfile, and all Ruby dependencies
+- Bundled with @vercel/ncc into dist/index.js
+- Tests rewritten with vitest
+- Removed docker_build.sh manual script (no longer needed)
+- All inputs remain backward compatible
+
 ## v1.10.0
 - Renamed default branch from master to main
 - Added CI workflow for tests and Docker build on push/PR

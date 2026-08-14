@@ -1,5 +1,5 @@
 name: 'Merge branch'
-description: 'A GitHub Action that manage git merge for any gitflow'
+description: 'A GitHub Action that manages git merge for any gitflow'
 author: Miguel Savignano
 inputs:
   type:
@@ -28,10 +28,8 @@ inputs:
     description: 'Does not merge the branch if no files have been changed'
     required: false
 runs:
-  using: 'docker'
-#image: 'Dockerfile'
- # image: "docker://delmendo/merge-branch:latest"
-  image: "docker://ghcr.io/r26d/merge-branch/merge-branch:v1.9.3"
+  using: 'node24'
+  main: 'dist/index.js'
 branding:
   icon: 'git-merge'
   color: 'purple'
