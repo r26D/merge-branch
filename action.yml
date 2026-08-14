@@ -3,7 +3,7 @@ description: 'A GitHub Action that manage git merge for any gitflow'
 author: Miguel Savignano
 inputs:
   type:
-    type: 'labeled | now'
+    description: 'Merge type: labeled | now'
     required: false
     default: 'labeled'
   label_name:

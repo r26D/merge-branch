@@ -1,3 +1,12 @@
+## v1.10.0
+- Renamed default branch from master to main
+- Added CI workflow for tests and Docker build on push/PR
+- Added release workflow to automate Docker image publishing and version bumps on tag push
+- Moved manual release scripts (tag.sh, docker_build.sh) to manual_scripts/
+- Fixed action.yml input type field to use proper description
+- Updated README examples to use actions/checkout@v4 and current version references
+- Removed merge conflict artifact from CHANGELOG
+
 ## v1.9.3
  - Added auto updating docs/action docker reference
  - Fixing issue with parameters passed into the system.
@@ -17,7 +26,6 @@
 
 - Support Github Enterprise [#15](https://github.com/devmasx/merge-branch/pull/15)
 - Bump addressable from 2.7.0 to 2.8.0 [#14](https://github.com/devmasx/merge-branch/pull/14)
->>>>>>> 6ec8363d74aad4f1615d1234ae1908b4185c4313
 
 ## v1.3.1
 

@@ -16,10 +16,10 @@ jobs:
   sync-branch:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v4
 
       - name: Merge development -> staging
-        uses: r26d/merge_branch@v1.9.1
+        uses: r26d/merge-branch@v1.9.3
         with:
           type: now
           from_branch: development
@@ -27,7 +27,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Merge staging -> uat
-        uses: r26d/merge_branch@v1.9.1
+        uses: r26d/merge-branch@v1.9.3
         with:
           type: now
           from_branch: staging
@@ -47,10 +47,10 @@ jobs:
   merge-branch:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v4
 
       - name: Merge staging -> uat
-        uses: r26d/merge-branch@v1.9.3"
+        uses: r26d/merge-branch@v1.9.3
         with:
           type: now
           target_branch: uat
@@ -69,10 +69,10 @@ jobs:
   merge-branch:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v4
 
       - name: Merge staging -> uat
-        uses: r26d/merge-branch@v1.9.3"
+        uses: r26d/merge-branch@v1.9.3
         with:
           type: now
           target_branch: uat
@@ -98,10 +98,10 @@ jobs:
   merge-branch:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v4
 
       - name: Merge by labeled
-        uses: r26d/merge-branch@v1.9.3"
+        uses: r26d/merge-branch@v1.9.3
         with:
           label_name: 'merged in develop'
           target_branch: 'develop'
