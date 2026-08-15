@@ -29,3 +29,10 @@ jobs:
           git add README.md
           git diff --cached --quiet || git commit -m "Update docs to ${VERSION}"
           git push
+
+      - name: Update major version tag
+        run: |
+          VERSION="${GITHUB_REF#refs/tags/}"
+          MAJOR=$(echo "${VERSION}" | grep -oP '^v\d+')
+          git tag -fa "${MAJOR}" -m "Update ${MAJOR} tag to ${VERSION}"
+          git push origin "${MAJOR}" --force
